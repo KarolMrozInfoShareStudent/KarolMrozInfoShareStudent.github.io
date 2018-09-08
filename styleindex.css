@@ -28,16 +28,44 @@ nav a{
     padding: 10px;
     }
 /*pseudo selector*/
-  nav a:hover{
+nav a:hover{
     background-color: #555;
   }
 
 a.fb {
-    background: url(/FaceBook-icon.png);
+    background: url(/FaceBook-icon.png) no-repeat center;
     }
 
- a.git{
+
+a.git{
      background: url(/Github-icon.png);
  }
- 
- 
+
+.social{
+
+    max-width: 80px;
+    margin-right: 20px
+  }
+
+/* flex styles */
+
+nav{
+    display: flex;
+    justify-content: space-between
+}
+
+.botton{display: flex
+}
+
+.social{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    }
+
+
+
+
+
