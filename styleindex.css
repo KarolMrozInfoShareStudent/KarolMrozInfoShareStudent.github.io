@@ -27,3 +27,7 @@ nav ul{
     display: block;
     padding: 10px;
   }
+/*pseudo selector*/
+  nav a:hover{
+    background-color: #555;
+  }
