@@ -99,6 +99,13 @@ nav{
 
 }
 
-.me h1{
-    font-size: 40px
+.Me h1{
+    text-align: center
 }
+
+
+
+.Me h2{
+    text-align: center
+}
+
