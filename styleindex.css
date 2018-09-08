@@ -104,10 +104,15 @@ nav{
 }
 
 .Me h1{
-    text-align: center
+    text-align: center;
+    transition-property: font-size ; color ;
+    transition-duration: 4s;
 }
 
-
+.Me h1:hover{
+    font-size: 50px;
+    color:red
+}
 
 .Me h2{
     text-align: center
