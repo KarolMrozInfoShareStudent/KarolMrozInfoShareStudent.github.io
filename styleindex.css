@@ -39,7 +39,7 @@ a.fb {
 
 
 a.git{
-     background: url(/Github-icon.png);
+     background: url(/Github-icon.png) no-repeat center;
  }
 
 .social{
@@ -105,14 +105,25 @@ nav{
 
 .Me h1{
     text-align: center;
-    transition-property: font-size ; color ;
+    transition-property: font-size , color. , rotate ;
     transition-duration: 4s;
+    
+    
 }
 
 .Me h1:hover{
     font-size: 50px;
-    color:red
+    color:red;
+    transform: rotate(360deg);
+   
+
+
+
 }
+
+    
+
+
 
 .Me h2{
     text-align: center
@@ -124,7 +135,7 @@ nav{
     color: red;
     text-shadow: 1px 1px rgb(59, 57, 57);
     transition-property: text-shadow, font-size;
-    transition-duration: 3s;
+    transition-duration: 3s 
     }
 }
 
