@@ -57,7 +57,7 @@
     font-size: 25px;
     display: block;
     padding: 10px 20px;
-    background: rgb(58, 42, 201);
+ 
 	cursor: pointer;
     height: 40px; 
     border-radius: 0px 0px 90px 90px;
@@ -66,8 +66,36 @@
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    background: linear-gradient(60deg, #0a39ce, #9ecc2b, #ce1501);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 3s ease infinite;
+-moz-animation: AnimationName 3s ease infinite;
+-o-animation: AnimationName 3s ease infinite;
+animation: AnimationName 3s ease infinite;
+
+}@-webkit-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
 }
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+
 .nav-menu li a p{
     font-family: Arial, Helvetica, sans-serif;
 }
