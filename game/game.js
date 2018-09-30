@@ -28,6 +28,11 @@ function gracz(){
     ctx.fillRect(graczX,graczY, paletSzerokość, paletkaWysokość);
 }
 
+function komputer(){
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(graczComputerX,graczComputerY, paletSzerokość, paletkaWysokość);
+}
+
 
 function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
@@ -53,3 +58,5 @@ table()
 piłka()
 
 gracz()
+
+komputer()
