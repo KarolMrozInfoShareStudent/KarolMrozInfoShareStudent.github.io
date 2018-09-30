@@ -11,8 +11,8 @@ const piłkaRozmiar = 20;
 
 const canvWidth = canv.width;
 const canvHeight = canv.height;
-const piłkaStartX = canvWidth / 2 - piłkaRozmiar;
-const piłkaStartY = canvHeight / 2 - piłkaRozmiar;
+let piłkaStartX = canvWidth / 2 - piłkaRozmiar;
+let piłkaStartY = canvHeight / 2 - piłkaRozmiar;
 
 const paletkaWysokość = 100;
 const paletSzerokość = 20
@@ -20,11 +20,15 @@ const paletSzerokość = 20
 const graczX = 70;
 const graczComputerX = 910
 
-const graczY = 200;
-const graczComputerY = 200;
+let graczY = 200;
+let graczComputerY = 200;
 
 let liniaSzerokość = 6;
 let liniaWysokość = 16;
+
+let piłkaSzybkośćX =1;
+let piłkaSzybkośćXY = 1;
+
 
 function gracz(){
     ctx.fillStyle = 'green';
@@ -58,6 +62,9 @@ function table() {
 function piłka() {
     ctx.fillStyle = 'black';
     ctx.fillRect(piłkaStartX, piłkaStartY, piłkaRozmiar, piłkaRozmiar);
+    
+    piłkaStartX += piłkaSzybkośćX;
+    piłkaStartY += piłkaSzybkośćXY;
 }
 
 
