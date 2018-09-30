@@ -23,8 +23,8 @@ const graczComputerX = 910
 const graczY = 200;
 const graczComputerY = 200;
 
-const liniaSzerokość = 6;
-const liniaWysokość = 16;
+let liniaSzerokość = 6;
+let liniaWysokość = 16;
 
 function gracz(){
     ctx.fillStyle = 'green';
@@ -43,7 +43,7 @@ function table() {
 
     for (let pozycjaLini = 20; pozycjaLini < canvHeight; pozycjaLini += 30){
         ctx.fillStyle = 'gray'
-        ctx.fillRect(canvWidth/ 2, pozycjaLini, liniaSzerokość,liniaWysokość)
+        ctx.fillRect(canvWidth/ 2 - liniaWysokość/2, pozycjaLini, liniaSzerokość,liniaWysokość)
     }
 
 }
