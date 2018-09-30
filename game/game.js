@@ -11,8 +11,23 @@ const piłkaRozmiar = 20;
 
 const canvWidth = canv.width;
 const canvHeight = canv.height;
-let piłkaStartX = canvWidth / 2 - piłkaRozmiar;
-let piłkaStartY = canvHeight / 2 - piłkaRozmiar;
+const piłkaStartX = canvWidth / 2 - piłkaRozmiar;
+const piłkaStartY = canvHeight / 2 - piłkaRozmiar;
+
+const paletkaWysokość = 100;
+const paletSzerokość = 20
+
+const graczX = 70;
+const graczComputerX = 910
+
+const graczY = 200;
+const graczComputerY = 200;
+
+function gracz(){
+    ctx.fillStyle = 'green';
+    ctx.fillRect(graczX,graczY, paletSzerokość, paletkaWysokość);
+}
+
 
 function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
@@ -36,3 +51,5 @@ function piłka() {
 table()
 
 piłka()
+
+gracz()
