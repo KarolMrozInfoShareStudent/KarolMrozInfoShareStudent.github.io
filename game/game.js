@@ -79,4 +79,4 @@ function gra() {
 
 }
 // funkcja setInterval umożliwia podanie dwóch argumentów pierwszy jest funkcją a drugi to czas co jaki ma być wykonana
-setInterval(gra, 25)
+setInterval(gra, 1000 / 60)
