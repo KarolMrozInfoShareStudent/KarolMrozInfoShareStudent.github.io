@@ -13,9 +13,14 @@ function table(){
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
     ctx.fillRect(0,0, canvWidth, canvHeight);
 }
-//fillRect jest właściwością, rysowanie w canvasie opiera sie na osi X pozima(od lewej do prawej)
+//fillRect jest właściwością wymaga podania czterech argumetóœ, rysowanie w canvasie opiera sie na osi X pozima(od lewej do prawej)
 // i osi Y (od góry do dołu) najpierw x y początek póżniej xy koniec rysowania
 // zamiast wpisywać na sztywno wymiar lepiej podać zmienną z wysokością
 
 
 table()
+
+const piłka = 20;
+
+ctx.fillStyle = 'black';//fil style koloruje uzywamy tyych samych wartości co w css
+ctx.fillRect(canvWidth/ 2,canvHeight /2, piłka, piłka);
