@@ -1,0 +1,32 @@
+#info{
+    
+    width: 800px;
+    height: 200px;
+    background-size: initial;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+
+
+}
+
+#info h1{
+    color: red;
+    text-align: center
+}
+
+#info p{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    font: bold
+}
+
+iframe{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 500px
+}

@@ -1,14 +1,15 @@
-/*body{
+body{
     margin: 0;
     padding: 0;
+    background: url(/Image/space-1.jpg)
 }
 
-*/
+
 
 .nav-menu a { 
     background: rgb(12, 8, 51);
 	display: block; 
-	padding: 25px;
+	padding: 20px;
     color: #F0EADC;
     text-decoration: none;
     flex: 1 1 0;
@@ -46,14 +47,13 @@
     width: 40%; 
     text-align: center;
     background: #333;
-    top: 20px;
     border-radius: 0 0 50px 0;
 	transition: all .3s ease-out;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
-    z-index: -1px;
+    z-index: -3px;
 	
 }
 
