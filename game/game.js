@@ -7,8 +7,12 @@ canv.height = 500;
 const piłkaRozmiar = 20;
 
 
+
+
 const canvWidth = canv.width;
 const canvHeight = canv.height;
+let piłkaStartX = canvWidth / 2 - piłkaRozmiar;
+let piłkaStartY = canvHeight / 2 - piłkaRozmiar;
 
 function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
@@ -24,7 +28,7 @@ function table() {
 
 function piłka() {
     ctx.fillStyle = 'black';
-    ctx.fillRect(canvWidth / 2 - piłkaRozmiar, canvHeight / 2 - piłkaRozmiar, piłkaRozmiar, piłkaRozmiar);
+    ctx.fillRect(piłkaStartX, piłkaStartY, piłkaRozmiar, piłkaRozmiar);
 }
 
 
