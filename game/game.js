@@ -23,6 +23,9 @@ const graczComputerX = 910
 const graczY = 200;
 const graczComputerY = 200;
 
+const liniaSzerokość = 6;
+const liniaWysokość = 16;
+
 function gracz(){
     ctx.fillStyle = 'green';
     ctx.fillRect(graczX,graczY, paletSzerokość, paletkaWysokość);
@@ -37,6 +40,12 @@ function komputer(){
 function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
     ctx.fillRect(0, 0, canvWidth, canvHeight);
+
+    for (let pozycjaLini = 20; pozycjaLini < canvHeight; pozycjaLini += 30){
+        ctx.fillStyle = 'gray'
+        ctx.fillRect(canvWidth/ 2, pozycjaLini, liniaSzerokość,liniaWysokość)
+    }
+
 }
 //fillRect jest właściwością wymaga podania czterech argumetóœ, rysowanie w canvasie opiera sie na osi X pozima(od lewej do prawej)
 // i osi Y (od góry do dołu) najpierw x y początek póżniej xy koniec rysowania
