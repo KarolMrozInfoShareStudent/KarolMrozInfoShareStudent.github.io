@@ -52,7 +52,8 @@
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    z-index: -1px;
 	
 }
 
@@ -66,20 +67,56 @@
     /* height: 40px; */
     border-radius: 0px 0px 90px 90px;
     position: absolute;
-    transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
+    color: #fff;
+	background: linear-gradient(-45deg, rgb(73, 27, 13), rgb(134, 87, 105), #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 5s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
+	animation: Gradient 5s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
 .nav-menu li a p{
     font-family: Arial, Helvetica, sans-serif;
 }
 #menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: fixed; top: 10px; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: -132px; }
 
 .nav-menu:hover {
-    top: 600px;
+    top: 20px;
 }
 
 
@@ -92,7 +129,7 @@
 }
 
 .nav-menu {
-    top: -330px;
+    top: 20px;
     
 }    
 
