@@ -26,18 +26,18 @@ let graczComputerY = 200;
 let liniaSzerokość = 6;
 let liniaWysokość = 16;
 
-let piłkaSzybkośćX =1;
+let piłkaSzybkośćX = 1;
 let piłkaSzybkośćXY = 1;
 
 
-function gracz(){
+function gracz() {
     ctx.fillStyle = 'green';
-    ctx.fillRect(graczX,graczY, paletSzerokość, paletkaWysokość);
+    ctx.fillRect(graczX, graczY, paletSzerokość, paletkaWysokość);
 }
 
-function komputer(){
+function komputer() {
     ctx.fillStyle = 'yellow';
-    ctx.fillRect(graczComputerX,graczComputerY, paletSzerokość, paletkaWysokość);
+    ctx.fillRect(graczComputerX, graczComputerY, paletSzerokość, paletkaWysokość);
 }
 
 
@@ -45,9 +45,9 @@ function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
     ctx.fillRect(0, 0, canvWidth, canvHeight);
 
-    for (let pozycjaLini = 20; pozycjaLini < canvHeight; pozycjaLini += 30){
+    for (let pozycjaLini = 20; pozycjaLini < canvHeight; pozycjaLini += 30) {
         ctx.fillStyle = 'gray'
-        ctx.fillRect(canvWidth/ 2 - liniaWysokość/2, pozycjaLini, liniaSzerokość,liniaWysokość)
+        ctx.fillRect(canvWidth / 2 - liniaWysokość / 2, pozycjaLini, liniaSzerokość, liniaWysokość)
     }
 
 }
@@ -62,17 +62,21 @@ function table() {
 function piłka() {
     ctx.fillStyle = 'black';
     ctx.fillRect(piłkaStartX, piłkaStartY, piłkaRozmiar, piłkaRozmiar);
-    
+
     piłkaStartX += piłkaSzybkośćX;
     piłkaStartY += piłkaSzybkośćXY;
 }
 
+function gra() {
 
+    table()
 
-table()
+    piłka()
 
-piłka()
+    gracz()
 
-gracz()
+    komputer()
 
-komputer()
+}
+// funkcja setInterval umożliwia podanie dwóch argumentów pierwszy jest funkcją a drugi to czas co jaki ma być wykonana
+setInterval(gra, 25)
