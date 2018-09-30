@@ -19,8 +19,8 @@ function table(){
 
 
 table()
-
+//piłka
 const piłka = 20;
 
 ctx.fillStyle = 'black';//fil style koloruje uzywamy tyych samych wartości co w css
-ctx.fillRect(canvWidth/ 2,canvHeight /2, piłka, piłka);
+ctx.fillRect(canvWidth/ 2 - piłka,canvHeight /2 - piłka, piłka, piłka);
