@@ -23,7 +23,7 @@ var rysujObramowanie = function () {
 
 
 var rysujWynik = function () {
-  kontekst.font = "30px ";
+  kontekst.font = "30px Courier";
   kontekst.fillStyle = "red";
   kontekst.textAlign = "left";
   kontekst.textBaseline = "top";
