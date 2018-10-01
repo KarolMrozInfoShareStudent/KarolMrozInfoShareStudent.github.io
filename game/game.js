@@ -62,6 +62,8 @@ function pozycjaKomutera () {
     {
         if(środekPaletki - środekPiłki > 200 ){
             console.log('wiecej niz 200')
+        }else if(środekPaletki - środekPiłki > 50){
+            console.log('wiecej niz 5o mniej niż 200')
         }
     }
 
