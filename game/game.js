@@ -61,25 +61,30 @@ function pozycjaKomutera () {
     if (piłkaStartX > 500)
     {
         if(środekPaletki - środekPiłki > 200 ){
-            console.log('AAAAA')
-            graczComputerY -= 15
+            //console.log('AAAAA')
+            graczComputerY -= 20
         }else if (środekPaletki - środekPiłki > 50){
-            console.log('BBB')
-            graczComputerY -= 5
+            //console.log('BBB')
+            graczComputerY -= 10
         }
         else if(środekPaletki - środekPiłki < - 200 ){
-            console.log('CCCC')
-            graczComputerY += 15
+            //console.log('CCCC')
+            graczComputerY += 20
         }else if(środekPaletki - środekPiłki < - 50){
-            console.log('DDDDD')
-            graczComputerY += 5
+            //console.log('DDDDD')
+            graczComputerY += 10
         }
     }
 
-    else if (piłkaStartX <= 500 && piłkaStartX > 150);
+    else if (piłkaStartX <= 500 && piłkaStartX > 150)
     {
-
-    }
+        if (środekPaletki - środekPiłki > 100){
+            graczComputerY -= 3
+        }
+        else if (piłkaStartX <= 500 && piłkaStartX < 150){
+            graczComputerY += 3
+        }
+    } 
 }
 
 
