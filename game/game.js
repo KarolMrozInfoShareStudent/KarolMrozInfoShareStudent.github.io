@@ -32,8 +32,8 @@ let piłkaSzybkośćY = 3;
 //window.addEventListener przyjmuje dwa argumenty pierwszy na jakie zdarzenie (słowo klucz potrzebne być musi mistrz joda) a drugi to funkcja, window jest na całe okno przeglądarki można przypiąć do danego 
 //obszaru np div , canvas
 
-function pozycjaGracza(e){
-    console.log('dziła')
+function pozycjaGracza(event){
+    console.log('event')
 }
 
 canv.addEventListener('mousemove', pozycjaGracza)
