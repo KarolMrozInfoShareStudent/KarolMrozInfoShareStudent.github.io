@@ -56,11 +56,11 @@ function pozycjaGracza(event){
 function przyśpieszeniePiłki(){
     console.log('przyśpieszam');
 
-    if(piłkaSzybkośćX > 0 && piłkaStartX < 16){
-        piłkaStartX += 0.5;
-    }else if(piłkaSzybkośćX <0 && piłkaStartX > -16)
+    if(piłkaSzybkośćX > 0 && piłkaStartX < 2){
+        piłkaStartX += 0.2
+    }else if(piłkaSzybkośćX <0 && piłkaStartX > -2)
     {
-        piłkaSzybkośćX -= 0.5;
+        piłkaSzybkośćX -= 0.2;
     }
 }
 
