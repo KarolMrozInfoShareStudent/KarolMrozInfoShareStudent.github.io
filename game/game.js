@@ -39,6 +39,15 @@ console.log(topCanv)
 function pozycjaGracza(event){
    // console.log('pozycja myszy to' + (event.clientY - topCanv))
    graczY = event.clientY - topCanv - paletkaWysokość / 2;
+
+   if(graczY >= canvHeight - paletkaWysokość)
+   {
+       graczY = canvHeight - paletkaWysokość
+   }
+   if (graczY <= 0)
+   {
+       graczY = 0
+   }
 }
 
 canv.addEventListener('mousemove', pozycjaGracza)
