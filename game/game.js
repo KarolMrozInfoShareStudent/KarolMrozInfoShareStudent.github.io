@@ -52,6 +52,11 @@ function pozycjaGracza(event){
    
 }
 
+
+
+
+
+
 function pozycjaKomutera () {
 
     var środekPaletki = graczComputerY + paletkaWysokość / 2;
@@ -91,7 +96,7 @@ function pozycjaKomutera () {
 
 
 function przyśpieszeniePiłki(){
-    console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
+    //console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
 
     if(piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10){
         piłkaStartX += Math.random(0.5) * 2 
@@ -156,7 +161,9 @@ function piłka() {
     {
         piłkaSzybkośćX = -piłkaSzybkośćX;
     }
-    
+
+
+   
 }
 
 function gra() {
