@@ -49,8 +49,29 @@ function pozycjaGracza(event){
        graczY = 0
    }
 
-   graczComputerY = graczY
+   
 }
+
+function pozycjaKomutera () {
+
+    var środekPaletki = graczComputerY +paletkaWysokość / 2;
+    var środekPiłki = piłkaSzybkośćY + piłkaRozmiar / 2;
+
+
+    if (piłkaStartX > 500)
+    {
+        if(środekPaletki - środekPiłki > 200 ){
+            console.log('wiecej niz 200')
+        }
+    }
+
+    else if (piłkaStartX <= 500 && piłkaStartX > 150)
+    {
+
+    }
+}
+
+
 
 
 function przyśpieszeniePiłki(){
@@ -131,6 +152,8 @@ function gra() {
     gracz()
 
     komputer()
+    
+    pozycjaKomutera()
 
 }
 // funkcja setInterval umożliwia podanie dwóch argumentów pierwszy jest funkcją a drugi to czas co jaki ma być wykonana
