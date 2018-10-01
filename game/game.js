@@ -76,7 +76,7 @@ function pozycjaKomutera () {
         }
     }
 
-    else if (piłkaStartX <= 500 && piłkaStartX > 150)
+    else if (piłkaStartX <= 500 && piłkaStartX > 150);
     {
 
     }
