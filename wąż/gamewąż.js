@@ -1,4 +1,4 @@
-var plansza = document.getElementById("plansza");
+var plansza = document.querySelector("#plansza");
 var kontekst = plansza.getContext("2d");
 
 
@@ -14,7 +14,7 @@ var wysokośćWBlokach = wysokość / rozmiarBloku;
 var wynik = 0;
 
 var rysujObramowanie = function () {
-  kontekst.fillStyle = "Gray";
+  kontekst.fillStyle = "gray";
   kontekst.fillRect(0, 0, szerokość, rozmiarBloku);
   kontekst.fillRect(0, wysokość - rozmiarBloku, szerokość, rozmiarBloku);
   kontekst.fillRect(0, 0, rozmiarBloku, wysokość);
@@ -33,7 +33,7 @@ var rysujWynik = function () {
 var koniecGry = function () {
   clearInterval(IdPrzedziału);
   kontekst.font = "60px Courier";
-  kontekst.fillStyle = "Black";
+  kontekst.fillStyle = "red";
   kontekst.textAlign = "center";
   kontekst.textBaseline = "middle";
   kontekst.fillText("Game Over", szerokość / 2, wysokość / 2);
@@ -91,7 +91,7 @@ var Wąż = function () {
 
 Wąż.prototype.rysuj = function () {
   for (var i = 0; i < this.segmenty.length; i++) {
-    this.segmenty[i].rysujKwadrat("Red");
+    this.segmenty[i].rysujKwadrat ("Red");
   }
 };
 
@@ -170,7 +170,7 @@ var jabłko = function () {
 
 
 jabłko.prototype.rysuj = function () {
-  this.pozycja.rysujokrąg("LimeGreen");
+  this.pozycja.rysujOkrąg("LimeGreen");
 };
 
 
