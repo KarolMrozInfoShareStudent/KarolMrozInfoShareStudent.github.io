@@ -62,13 +62,17 @@ function pozycjaKomutera () {
     {
         if(środekPaletki - środekPiłki > 200 ){
             console.log('AAAAA')
+            graczComputerY -= 15
         }else if (środekPaletki - środekPiłki > 50){
             console.log('BBB')
+            graczComputerY -= 5
         }
         else if(środekPaletki - środekPiłki < - 200 ){
             console.log('CCCC')
+            graczComputerY += 15
         }else if(środekPaletki - środekPiłki < - 50){
             console.log('DDDDD')
+            graczComputerY += 5
         }
     }
 
