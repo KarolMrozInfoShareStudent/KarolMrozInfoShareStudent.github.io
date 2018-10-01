@@ -54,19 +54,20 @@ function pozycjaGracza(event){
 
 
 function przyśpieszeniePiłki(){
+    console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
 
     if(piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10){
-        piłkaStartX += Math.random(1) * 2 
+        piłkaStartX += Math.random(0.5) * 2 
     }else if(piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10)
     {
-        piłkaSzybkośćX -= Math.random(1) * 2 
+        piłkaSzybkośćX -= Math.random(0.5) * 2 
     }
 
     if(piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10){
-        piłkaStartY += Math.random(1) * 2 
+        piłkaStartY += Math.random(0.2) 
     }else if(piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10)
     {
-        piłkaSzybkośćY -= Math.random(1) * 2
+        piłkaSzybkośćY -= Math.random(0.2) 
     }
 }
 
