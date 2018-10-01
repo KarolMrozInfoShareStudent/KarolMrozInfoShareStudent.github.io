@@ -36,80 +36,86 @@ topCanv = canv.offsetTop;
 //console.log(topCanv)
 
 
-function pozycjaGracza(event){
-   // console.log('pozycja myszy to' + (event.clientY - topCanv))
-   graczY = event.clientY - topCanv - paletkaWysokość / 2;
 
-   if(graczY >= canvHeight - paletkaWysokość)
-   {
-       graczY = canvHeight - paletkaWysokość
-   }
-   if (graczY <= 0)
-   {
-       graczY = 0
-   }
 
-   
+
+
+
+
+function pozycjaGracza(event) {
+    // console.log('pozycja myszy to' + (event.clientY - topCanv))
+    graczY = event.clientY - topCanv - paletkaWysokość / 2;
+
+    if (graczY >= canvHeight - paletkaWysokość) {
+        graczY = canvHeight - paletkaWysokość
+    }
+    if (graczY <= 0) {
+        graczY = 0
+    }
+
+
+}
+
+function odbiciePiłki(){
+
+
+
+
+
 }
 
 
 
 
-
-
-function pozycjaKomutera () {
+function pozycjaKomutera() {
 
     var środekPaletki = graczComputerY + paletkaWysokość / 2;
     var środekPiłki = piłkaStartY + piłkaRozmiar / 2;
 
 
-    if (piłkaStartX > 500)
-    {
-        if(środekPaletki - środekPiłki > 200 ){
+    if (piłkaStartX > 500) {
+        if (środekPaletki - środekPiłki > 200) {
             //console.log('AAAAA')
             graczComputerY -= 20
-        }else if (środekPaletki - środekPiłki > 50){
+        } else if (środekPaletki - środekPiłki > 50) {
             //console.log('BBB')
             graczComputerY -= 10
         }
-        else if(środekPaletki - środekPiłki < - 200 ){
+        else if (środekPaletki - środekPiłki < - 200) {
             //console.log('CCCC')
             graczComputerY += 20
-        }else if(środekPaletki - środekPiłki < - 50){
+        } else if (środekPaletki - środekPiłki < - 50) {
             //console.log('DDDDD')
             graczComputerY += 10
         }
     }
 
-    else if (piłkaStartX <= 500 && piłkaStartX > 150)
-    {
-        if (środekPaletki - środekPiłki > 100){
+    else if (piłkaStartX <= 500 && piłkaStartX > 150) {
+        if (środekPaletki - środekPiłki > 100) {
             graczComputerY -= 3
         }
-        else if (piłkaStartX <= 500 && piłkaStartX < 150){
+        else if (piłkaStartX <= 500 && piłkaStartX < 150) {
             graczComputerY += 3
         }
-    } 
+    }
 }
 
 
 
 
-function przyśpieszeniePiłki(){
+function przyśpieszeniePiłki() {
     //console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
 
-    if(piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10){
-        piłkaStartX += Math.random(0.5) * 2 
-    }else if(piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10)
-    {
-        piłkaSzybkośćX -= Math.random(0.5) * 2 
+    if (piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10) {
+        piłkaStartX += Math.random(0.5) * 2
+    } else if (piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10) {
+        piłkaSzybkośćX -= Math.random(0.5) * 2
     }
 
-    if(piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10){
-        piłkaStartY += Math.random(0.2) 
-    }else if(piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10)
-    {
-        piłkaSzybkośćY -= Math.random(0.2) 
+    if (piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10) {
+        piłkaStartY += Math.random(0.2)
+    } else if (piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10) {
+        piłkaSzybkośćY -= Math.random(0.2)
     }
 }
 
@@ -152,18 +158,15 @@ function piłka() {
     piłkaStartX += piłkaSzybkośćX;
     piłkaStartY += piłkaSzybkośćY;
 
-    if (piłkaStartY <= 0 || piłkaStartY + piłkaRozmiar >= canvHeight)
-    {
+    if (piłkaStartY <= 0 || piłkaStartY + piłkaRozmiar >= canvHeight) {
         piłkaSzybkośćY = -piłkaSzybkośćY;
     }
     przyśpieszeniePiłki()
-    if (piłkaStartX <=0 || piłkaStartX + piłkaRozmiar >= canvWidth)
-    {
+    if (piłkaStartX <= 0 || piłkaStartX + piłkaRozmiar >= canvWidth) {
         piłkaSzybkośćX = -piłkaSzybkośćX;
     }
 
 
-   
 }
 
 function gra() {
@@ -175,7 +178,7 @@ function gra() {
     gracz()
 
     komputer()
-    
+
     pozycjaKomutera()
 
 }
