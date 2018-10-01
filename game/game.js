@@ -54,13 +54,19 @@ function pozycjaGracza(event){
 
 
 function przyśpieszeniePiłki(){
-    console.log('piłkaSzybkośćX');
 
-    if(piłkaSzybkośćX > 0 && piłkaSzybkośćX < 8){
+    if(piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10){
         piłkaStartX += 1
-    }else if(piłkaSzybkośćX < 0 && piłkaSzybkośćX > -8)
+    }else if(piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10)
     {
         piłkaSzybkośćX -= 1;
+    }
+
+    if(piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10){
+        piłkaStartY += 1
+    }else if(piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10)
+    {
+        piłkaSzybkośćY -= 1;
     }
 }
 
@@ -107,12 +113,12 @@ function piłka() {
     {
         piłkaSzybkośćY = -piłkaSzybkośćY;
     }
-    
+    przyśpieszeniePiłki()
     if (piłkaStartX <=0 || piłkaStartX + piłkaRozmiar >= canvWidth)
     {
         piłkaSzybkośćX = -piłkaSzybkośćX;
     }
-    przyśpieszeniePiłki()
+    
 }
 
 function gra() {
