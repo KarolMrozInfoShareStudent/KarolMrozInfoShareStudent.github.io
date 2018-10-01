@@ -23,8 +23,8 @@ var rysujObramowanie = function () {
 
 
 var rysujWynik = function () {
-  kontekst.font = "20px Courier";
-  kontekst.fillStyle = "Black";
+  kontekst.font = "30px ";
+  kontekst.fillStyle = "red";
   kontekst.textAlign = "left";
   kontekst.textBaseline = "top";
   kontekst.fillText("Wynik: " + wynik, rozmiarBloku, rozmiarBloku);
@@ -68,7 +68,7 @@ Blok.prototype.rysujOkrąg = function (kolor) {
   var środekX = this.kol * rozmiarBloku + rozmiarBloku / 2;
   var środekY = this.wiersz * rozmiarBloku + rozmiarBloku / 2;
   kontekst.fillStyle = kolor;
-  okrąg(środekX, środekY, rozmiarBloku / 2, true);
+  okrąg(środekX, środekY, rozmiarBloku / 1, true);
 };
 
 
@@ -121,7 +121,7 @@ Wąż.prototype.przesuń = function () {
 
   if (nowaGłowa.porównaj(jabłko.pozycja)) {
     wynik++;
-    jabłko.promień();
+    jabłko.rysuj();
   } else {
     this.segmenty.pop();
   }

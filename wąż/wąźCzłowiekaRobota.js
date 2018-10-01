@@ -25,7 +25,7 @@ function game() {
     if(py>tc-1) {
         py= 0;
     }
-    ctx.fillStyle="black";
+    ctx.fillStyle="red";
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="lime";
