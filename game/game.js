@@ -55,8 +55,6 @@ function table() {
 // i osi Y (od góry do dołu) najpierw x y początek póżniej xy koniec rysowania
 // zamiast wpisywać na sztywno wymiar lepiej podać zmienną z wysokością
 
-
-
 //piłka
 
 function piłka() {
@@ -69,6 +67,10 @@ function piłka() {
     if (piłkaStartY <= 0 || piłkaStartY + piłkaRozmiar >= canvHeight)
     {
         piłkaSzybkośćY = -piłkaSzybkośćY;
+    }
+    if (piłkaStartX <=0 || piłkaStartX + piłkaRozmiar >= canvWidth)
+    {
+        piłkaSzybkośćX = -piłkaSzybkośćX;
     }
 }
 
