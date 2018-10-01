@@ -54,16 +54,21 @@ function pozycjaGracza(event){
 
 function pozycjaKomutera () {
 
-    var środekPaletki = graczComputerY +paletkaWysokość / 2;
-    var środekPiłki = piłkaSzybkośćY + piłkaRozmiar / 2;
+    var środekPaletki = graczComputerY + paletkaWysokość / 2;
+    var środekPiłki = piłkaStartY + piłkaRozmiar / 2;
 
 
     if (piłkaStartX > 500)
     {
         if(środekPaletki - środekPiłki > 200 ){
-            console.log('wiecej niz 200')
-        }else if(środekPaletki - środekPiłki > 50){
-            console.log('wiecej niz 5o mniej niż 200')
+            console.log('AAAAA')
+        }else if (środekPaletki - środekPiłki > 50){
+            console.log('BBB')
+        }
+        else if(środekPaletki - środekPiłki < - 200 ){
+            console.log('CCCC')
+        }else if(środekPaletki - środekPiłki < - 50){
+            console.log('DDDDD')
         }
     }
 
