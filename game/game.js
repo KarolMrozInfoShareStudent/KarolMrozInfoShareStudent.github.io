@@ -27,7 +27,7 @@ let liniaSzerokość = 6;
 let liniaWysokość = 16;
 
 let piłkaSzybkośćX = 1;
-let piłkaSzybkośćXY = 1;
+let piłkaSzybkośćY = 1;
 
 
 function gracz() {
@@ -64,9 +64,12 @@ function piłka() {
     ctx.fillRect(piłkaStartX, piłkaStartY, piłkaRozmiar, piłkaRozmiar);
 
     piłkaStartX += piłkaSzybkośćX;
-    piłkaStartY += piłkaSzybkośćXY;
+    piłkaStartY += piłkaSzybkośćY;
 
-    if
+    if (piłkaStartY <= 0 || piłkaStartY + piłkaRozmiar >= canvHeight)
+    {
+        piłkaSzybkośćY = -piłkaSzybkośćY;
+    }
 }
 
 function gra() {
