@@ -29,12 +29,14 @@ let liniaWysokość = 16;
 let piłkaSzybkośćX = 3;
 let piłkaSzybkośćY = 3;
 
-//window.addEventListener przyjmuje dwa argumenty pierwszy na jakie zdarzenie a drugi to funkcja, window jest na całe okno przeglądarki można przypiąć do danego 
+//window.addEventListener przyjmuje dwa argumenty pierwszy na jakie zdarzenie (słowo klucz potrzebne być musi mistrz joda) a drugi to funkcja, window jest na całe okno przeglądarki można przypiąć do danego 
 //obszaru np div , canvas
 
-canv.addEventListener('click', function(){
-    console.log('klikniecie')
-})
+function pozycjaGracza(e){
+    console.log('dziła')
+}
+
+canv.addEventListener('mousemove', pozycjaGracza)
 
 
 
