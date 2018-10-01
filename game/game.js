@@ -33,7 +33,7 @@ let piłkaSzybkośćY = 3;
 //obszaru np div , canvas
 
 topCanv = canv.offsetTop;
-console.log(topCanv)
+//console.log(topCanv)
 
 
 function pozycjaGracza(event){
