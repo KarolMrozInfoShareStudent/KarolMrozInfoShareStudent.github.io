@@ -65,6 +65,8 @@ function piłka() {
 
     piłkaStartX += piłkaSzybkośćX;
     piłkaStartY += piłkaSzybkośćXY;
+
+    if
 }
 
 function gra() {
