@@ -48,6 +48,20 @@ function pozycjaGracza(event){
    {
        graczY = 0
    }
+
+   graczComputerY = graczY
+}
+
+
+function przyśpieszeniePiłki(){
+    console.log('przyśpieszam');
+
+    if(piłkaSzybkośćX > 0 && piłkaStartX < 16){
+        piłkaStartX += 0.5;
+    }else if(piłkaSzybkośćX <0 && piłkaStartX > -16)
+    {
+        piłkaSzybkośćX -= 0.5;
+    }
 }
 
 canv.addEventListener('mousemove', pozycjaGracza)
@@ -93,10 +107,12 @@ function piłka() {
     {
         piłkaSzybkośćY = -piłkaSzybkośćY;
     }
+    
     if (piłkaStartX <=0 || piłkaStartX + piłkaRozmiar >= canvWidth)
     {
         piłkaSzybkośćX = -piłkaSzybkośćX;
     }
+    przyśpieszeniePiłki()
 }
 
 function gra() {
