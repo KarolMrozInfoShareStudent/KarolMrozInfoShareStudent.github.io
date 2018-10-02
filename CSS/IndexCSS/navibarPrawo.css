@@ -1,18 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url(/Image/space-1.jpg)
-}
-
-#top{
-	display: flex;
-	justify-content: space-between
-}
-
-
-
-
-.nav-menu a { 
+.Prawonav-menu a { 
     background: rgb(12, 8, 51);
 	display: block; 
 	padding: 10px;
@@ -26,24 +12,24 @@ body{
 	-o-transition: all .1s ease-in-out;
 }
 
-.nav-menu a:hover { 
+.Prawonav-menu a:hover { 
     background: #E5DAC0; color: #333;    
 }
 
-.nav-menu-icon:hover {
+.Prawonav-menu-icon:hover {
     background: #E5DAC0; color: #333; 
 }
 
 
 
-.nav-menu  li:last-child a { 
+.Prawonav-menu  li:first-child a { 
     
-    border-radius: 0 0 50px 0;
+    border-radius: 0 0 0 50px;
     border: none;
     
 }
 
-.nav-menu ul {
+.Prawonav-menu ul {
     list-style-type: none;
 	display: flex;
 	margin-block-start: 1em;
@@ -54,8 +40,7 @@ body{
    
 }
 
-.nav-menu {
-    width: 30%; 
+.Prawonav-menu {
 	background: inherit;
     border-radius: 0 0 50px 0;
 	transition: all .3s ease-out;
@@ -63,11 +48,11 @@ body{
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
-	margin-top: -100px
+	margin-top: 100px
 	
 }
 
-.nav-menu-icon {
+.Prawonav-menu-icon {
     color: #F0EADC; 
     font-size: 25px;
     display: block;
@@ -125,33 +110,16 @@ body{
 
 
 
-.nav-menu li a p{
+.Prawonav-menu li a p{
     font-family: Arial, Helvetica, sans-serif;
 }
-#menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: fixed; top: 90px; }
+#menuTogglePrawo { display: none; }
+#menuTogglePrawo:checked ~ .Prawonav-menu { position: fixed; top: 90px; }
 
-.nav-menu:hover {
+.Prawonav-menu:hover {
     top: 10px;
 }
 
 
 
-
-/*Mobile styles*/
-
-@media (max-width: 590px)  {
-
-.nav-menu ul {
-    display: block;
-}
-
-.nav-menu {
-    top: 20px;
-    
-}    
-
-}
-
-/*///////////////////////////////////////////////**/
 

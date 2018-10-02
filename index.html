@@ -6,57 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>KarolMróz</title>
+  <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibarPrawo.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibar.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/info.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 </head>
 
 
 <body>
-  
-  <div class="wrapper">
-        <input type="checkbox" id="menuToggle">
-        <nav class="nav-menu sticky">
-          <ul>
-            <li>
-              <a href="#home">
-                <p>HOME</p>
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                <p>ABOUT ME</p>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <p>CONTACT</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p>GAME</p>
-              </a>
-            </li>
-          </ul>
+
+
+
+  <div id="top">
+      <div class="wrapper">
+          <input type="checkbox" id="menuToggle">
+          <nav class="nav-menu sticky">
+            <ul>
+              <li>
+                <a href="#home">
+                  <p>HOME</p>
+                </a>
+              </li>
+              <li>
+                <a href="#about">
+                  <p>ABOUT ME</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p>CONTACT</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>GAME</p>
+                </a>
+              </li>
+            </ul>
       
-          <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
-        </nav>
+            <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
+          </nav>
+        </div> 
 
-      </div>
 
-      <div id =info>
-        <h1>Uwaga</h1>
-        <p>Strona aktualnie w przebudowie, trwają prace nie przeszkadzać</p>
-        <p>Zagraj w grę "GALAKTYCZNY WĄŻ" i utucz go level hard</p>
-        <canvas id="plansza" width="400" height="400"></canvas>
-      </div>
 
-      
+        <div class="wrappe2">
+            <input type="checkbox" id="menuTogglePrawo">
+            <nav class="Prawonav-menu sticky">
+              <ul>
+                <li>
+                  <a href="#home">
+                    <p>HOME</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#about">
+                    <p>ABOUT ME</p>
+                  </a>
+                </li>
+               
+              </ul>
+        
+              <label for="menuTogglePrawo" class="Prawonav-menu-icon">&#10224;</label>
+            </nav>
+          </div> 
 
-<body>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id=info>
+    <h1>Uwaga</h1>
+    <p>Strona aktualnie w przebudowie, trwają prace nie przeszkadzać</p>
+    <p>Zagraj w grę "GALAKTYCZNY WĄŻ" i utucz go level hard</p>
+    <canvas id="plansza" width="400" height="400"></canvas>
+  </div>
+
+
+
+  <body>
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="/wąż/gamewąż.js"></script>
-</body>
+  </body>
 
 </html>
