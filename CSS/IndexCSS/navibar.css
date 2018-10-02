@@ -158,5 +158,15 @@ body{
 
 /*///////////////////////////////////////////////**/
 
+.gra{
+	width: 300px;
+	height: 150px;
+	cursor: pointer;
+	background: url(/Image/firstPageImage/Snake-classics-320x240.jpg) no-repeat center;
+	font-size: 20px;
+	color: red;
+	display: flex;
+	justify-content: center
+}
 
-   
+

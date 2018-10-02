@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gra Karol Mróz</title>
     <style>
-        #plansza{
-            background: aliceblue;
-            border: 4px solid red
-        }
+       
 
         body{
             margin: 0;
@@ -17,14 +14,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            background: gray
-
+            background: url(/Image/space-1.jpg) 100% 100%;
+            
         }
+        #snake{
+            background: url(/Image/space-1.jpg) 100% 100%;
+        }
+
     </style>
 </head>
 <body>
+    <div id='snake'>
     <canvas id="plansza"></canvas>
+    </div>
+   
  
 
     <script src="game.js"></script>
