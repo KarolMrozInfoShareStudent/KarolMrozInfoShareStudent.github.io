@@ -9,8 +9,8 @@
 
 
 .Prawonav-menu  li a {
-	width: 50px;
-	height: 50px; 
+	width: 60px;
+	height: 60px; 
     
     border-radius: 50%;
 	border: 1px solid yellow
@@ -20,12 +20,12 @@
 
 .Prawonav-menu ul {
     list-style-type: none;
-	display: flex 
+	display: flex;
+	justify-content: space-between
    
 }
 
 .Prawonav-menu {
-	width: 400%; 
 	background: inherit;
     border-radius: 0 0 50px 0;
 	transition: all .3s ease-out;
@@ -33,8 +33,9 @@
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
-	margin-top: -100px;
-	position: sticky
+	margin-top: -92px;
+	position: sticky;
+	
 	
 	
 }
