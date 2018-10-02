@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>KarolMróz</title>
+  <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/loader.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibarPrawo.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibar.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/info.css" />
-
+ 
 </head>
 
 
 <body>
+
+    <div id="loader-wrapper">
+        <div class="load">
+          <hr/><hr/><hr/><hr/>
+        </div>
+    </div>
 
 
 
@@ -98,8 +105,20 @@
 
 
   <body>
+     
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="/wąż/gamewąż.js"></script>
+    <script>
+        $('html').addClass('js');
+  
+          $(window).load(function() {
+              setTimeout(
+                  function() {
+                      $("#loader-wrapper").fadeOut();
+                  },4000);
+          });
+          
+          </script>
   </body>
 
 </html>
