@@ -6,7 +6,9 @@ body{
 
 #top{
 	display: flex;
-	justify-content: space-between
+	justify-content: space-between;
+	width: 100%;
+	
 }
 
 
@@ -129,7 +131,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 #menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: fixed; top: 90px; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: 100px; }
 
 .nav-menu:hover {
     top: 10px;
