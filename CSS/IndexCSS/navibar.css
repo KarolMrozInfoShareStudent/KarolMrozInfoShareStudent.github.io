@@ -6,6 +6,14 @@ body{
 
 
 
+
+.wrapper{
+	display: flex;
+	justify-content: space-between
+}
+
+
+
 .nav-menu a { 
     background: rgb(12, 8, 51);
 	display: block; 
@@ -30,7 +38,7 @@ body{
 
 
 
-.nav-menu li:last-child a { 
+.nav-menu  li:last-child a { 
     
     border-radius: 0 0 50px 0;
     border: none;
@@ -113,6 +121,12 @@ body{
 		background-position: 0% 50%
 	}
 }
+/*drop down contact*/
+
+  
+
+
+
 .nav-menu li a p{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -122,6 +136,8 @@ body{
 .nav-menu:hover {
     top: 30px;
 }
+
+
 
 
 /*Mobile styles*/
@@ -138,3 +154,147 @@ body{
 }    
 
 }
+
+/*///////////////////////////////////////////////**/
+
+.nav-menu a { 
+    background: rgb(12, 8, 51);
+	display: block; 
+	padding: 10px;
+    color: #F0EADC;
+    text-decoration: none;
+    flex: 1 1 0;
+    transition: all .1s ease-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+}
+
+.nav-menu a:hover { 
+    background: #E5DAC0; color: #333;    
+}
+
+.nav-menu-icon:hover {
+    background: #E5DAC0; color: #333; 
+}
+
+
+
+.nav-menu  li:last-child a { 
+    
+    border-radius: 0 0 50px 0;
+    border: none;
+    
+}
+
+.nav-menu ul {
+    list-style-type: none;
+	display: flex;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start:0px;
+   
+}
+
+.nav-menu {
+    width: 30%; 
+	background: inherit;
+    border-radius: 0 0 50px 0;
+	transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	margin-top: -100px
+	
+}
+
+.nav-menu-icon {
+    color: #F0EADC; 
+    font-size: 25px;
+    display: block;
+    padding: 10px 20px;
+    background: rgb(12, 8, 51);
+	cursor: pointer;
+    /* height: 40px; */
+    border-radius: 0px 0px 90px 90px;
+    position: absolute;
+    color: #fff;
+	background: linear-gradient(-45deg, rgb(73, 27, 13), rgb(134, 87, 105), #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 3s ease infinite;
+	-moz-animation: Gradient 3s ease infinite;
+	animation: Gradient 3s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+/*drop down contact*/
+
+  
+
+
+
+.nav-menu li a p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#menuToggle { display: none; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: 90px; }
+
+.nav-menu:hover {
+    top: 30px;
+}
+
+
+
+
+/*Mobile styles*/
+
+@media (max-width: 590px)  {
+
+.nav-menu ul {
+    display: block;
+}
+
+.nav-menu {
+    top: 20px;
+    
+}    
+
+}
+
