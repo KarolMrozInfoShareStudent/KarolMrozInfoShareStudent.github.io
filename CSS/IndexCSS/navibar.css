@@ -39,14 +39,18 @@ body{
 
 .nav-menu ul {
     list-style-type: none;
-    display: flex;  
+	display: flex;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start:0px;
    
 }
 
 .nav-menu {
     width: 30%; 
-    text-align: center;
-    background: #333;
+	background: inherit;
     border-radius: 0 0 50px 0;
 	transition: all .3s ease-out;
 	-webkit-transition: all .3s ease-in-out;
@@ -70,9 +74,9 @@ body{
     color: #fff;
 	background: linear-gradient(-45deg, rgb(73, 27, 13), rgb(134, 87, 105), #23A6D5, #23D5AB);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 5s ease infinite;
-	-moz-animation: Gradient 5s ease infinite;
-	animation: Gradient 5s ease infinite;
+	-webkit-animation: Gradient 3s ease infinite;
+	-moz-animation: Gradient 3s ease infinite;
+	animation: Gradient 3s ease infinite;
 }
 @-webkit-keyframes Gradient {
 	0% {
