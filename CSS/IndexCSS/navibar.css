@@ -1,13 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(/Image/space-1.jpg)
+	background: url(/Image/space-1.jpg) 100% 100%;
+	height: 2000px;
 }
 
 #top{
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
 	
 }
 
@@ -65,7 +65,8 @@ body{
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
-	margin-top: -100px
+	margin-top: -100px;
+	position: fixed
 	
 }
 

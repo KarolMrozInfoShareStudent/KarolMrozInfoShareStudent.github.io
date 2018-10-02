@@ -4,7 +4,6 @@
 	padding: 10px;
     color: #F0EADC;
     text-decoration: none;
-    flex: 1 1 0;
     transition: all .1s ease-out;
 	-webkit-transition: all .1s ease-in-out;
 	-moz-transition: all .1s ease-in-out;
@@ -32,15 +31,12 @@
 .Prawonav-menu ul {
     list-style-type: none;
 	display: flex;
-	margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start:0px;
+	width: 30%; 
    
 }
 
 .Prawonav-menu {
+	width: 400%; 
 	background: inherit;
     border-radius: 0 0 50px 0;
 	transition: all .3s ease-out;
@@ -48,16 +44,19 @@
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
-	margin-top: -90px
+	margin-top: -100px;
+	position: sticky
 	
 	
 }
 
 .Prawonav-menu-icon {
+	
     color: #F0EADC; 
     font-size: 25px;
     display: block;
-    padding: 10px 20px;
+	padding: 10px 22px;
+	
     background: rgb(12, 8, 51);
 	cursor: pointer;
     /* height: 40px; */
@@ -118,9 +117,20 @@
 #menuTogglePrawo:checked ~ .Prawonav-menu { position: relative; top: 100px; }
 
 .Prawonav-menu:hover {
-    top: 100px;
+    top: 10px;
 }
 
 
+@media (max-width: 590px)  {
 
+	.Prawonav-menu ul {
+		display: block;
+	}
+	
+	.Prawonav-menu {
+		top: 20px;
+		
+	}    
+	
+	}
 
