@@ -1,37 +1,26 @@
 .Prawonav-menu a { 
-    background: rgb(12, 8, 51);
+   
 	display: block; 
-	padding: 10px;
-    color: #F0EADC;
-    text-decoration: none;
-    transition: all .1s ease-out;
-	-webkit-transition: all .1s ease-in-out;
-	-moz-transition: all .1s ease-in-out;
-	-ms-transition: all .1s ease-in-out;
-	-o-transition: all .1s ease-in-out;
-}
-
-.Prawonav-menu a:hover { 
-    background: #E5DAC0; color: #333;    
-}
-
-.Prawonav-menu-icon:hover {
-    background: #E5DAC0; color: #333; 
+	
+  
 }
 
 
 
-.Prawonav-menu  li:first-child a { 
+
+.Prawonav-menu  li a {
+	width: 50px;
+	height: 50px; 
     
-    border-radius: 0 0 0 50px;
-    border: none;
+    border-radius: 50%;
+	border: 1px solid yellow
+	
     
 }
 
 .Prawonav-menu ul {
     list-style-type: none;
-	display: flex;
-	width: 30%; 
+	display: flex 
    
 }
 
@@ -134,3 +123,15 @@
 	
 	}
 
+
+
+.git a{
+	background: url(/Image/firstPageImage/Github-icon.png) center no-repeat;
+	background-size: 140% 140%
+}
+
+
+.lE a {
+	background: url(/Image/firstPageImage//linkedin-icon.png) center no-repeat;
+	background-size: 100% 100%
+}
