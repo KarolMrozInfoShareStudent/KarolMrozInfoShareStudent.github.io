@@ -68,7 +68,7 @@ Blok.prototype.rysujOkrąg = function (kolor) {
   var środekX = this.kol * rozmiarBloku + rozmiarBloku / 2;
   var środekY = this.wiersz * rozmiarBloku + rozmiarBloku / 2;
   kontekst.fillStyle = kolor;
-  okrąg(środekX, środekY, rozmiarBloku / 1, true);
+  okrąg(środekX, środekY, rozmiarBloku / 2, true);
 };
 
 
@@ -121,7 +121,7 @@ Wąż.prototype.przesuń = function () {
 
   if (nowaGłowa.porównaj(jabłko.pozycja)) {
     wynik++;
-    jabłko.rysuj();
+    jabłko.promień();
   } else {
     this.segmenty.pop();
   }
@@ -164,33 +164,32 @@ Wąż.prototype.ustawKierunek = function (nowyKierunek) {
 };
 
 // Konstruktor jabłko
-   
-  var jabłko = function () {
+var jabłko = function () {
   this.pozycja = new Blok(10, 10);
 };
 
 
-Jabłko.prototype.rysuj = function () {
+jabłko.prototype.rysuj = function () {
   this.pozycja.rysujOkrąg("LimeGreen");
 };
 
 
-Jabłko.prototype.przenieś = function  () {
+jabłko.prototype.przenieś = function () {
   var losowaKolumna = Math.floor(Math.random() * (szerokośćWBlokach - 2)) + 1;
   var losowyWiersz = Math.floor(Math.random() * (wysokośćWBlokach - 2)) + 1;
   this.pozycja = new Blok(losowaKolumna, losowyWiersz);
 };
 
 
-var wąż = new Wąż();
-var jabłko = new Jabłko();
+var Wąż = new Wąż();
+var jabłko = new jabłko();
 
 
 var IdPrzedziału = setInterval(function () {
   kontekst.clearRect(0, 0, szerokość, wysokość);
   rysujWynik();
-  wąż.przesuń();
-  wąż.rysuj();
+  Wąż.przesuń();
+  Wąż.rysuj();
   jabłko.rysuj();
   rysujObramowanie();
 }, 100);
@@ -204,7 +203,7 @@ var IdPrzedziału = setInterval(function () {
 };
 
 
-$("#plansza").keydown(function (zdarzenie) {
+$("body").keydown(function (zdarzenie) {
   var nowyKierunek = kierunki[zdarzenie.keyCode];
   if (nowyKierunek !== undefined) {
     Wąż.ustawKierunek(nowyKierunek);

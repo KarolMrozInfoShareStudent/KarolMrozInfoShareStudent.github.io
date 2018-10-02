@@ -9,7 +9,7 @@ body{
 .nav-menu a { 
     background: rgb(12, 8, 51);
 	display: block; 
-	padding: 20px;
+	padding: 10px;
     color: #F0EADC;
     text-decoration: none;
     flex: 1 1 0;
@@ -44,7 +44,7 @@ body{
 }
 
 .nav-menu {
-    width: 40%; 
+    width: 30%; 
     text-align: center;
     background: #333;
     border-radius: 0 0 50px 0;
@@ -53,8 +53,7 @@ body{
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
-	position: fixed;
-	margin-top: -150px
+	margin-top: -100px
 	
 }
 
