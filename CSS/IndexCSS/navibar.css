@@ -113,16 +113,16 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 #menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: fixed; top: 150px; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: 90px; }
 
 .nav-menu:hover {
-    top: 20px;
+    top: 30px;
 }
 
 
 /*Mobile styles*/
 
-@media (max-width: 576px)  {
+@media (max-width: 590px)  {
 
 .nav-menu ul {
     display: block;

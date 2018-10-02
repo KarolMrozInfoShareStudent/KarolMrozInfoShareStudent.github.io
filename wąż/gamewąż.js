@@ -120,8 +120,8 @@ Wąż.prototype.przesuń = function () {
   this.segmenty.unshift(nowaGłowa);
 
   if (nowaGłowa.porównaj(jabłko.pozycja)) {
-    wynik++;
-    jabłko.promień();
+    wynik ++;
+    jabłko.przenieś();
   } else {
     this.segmenty.pop();
   }
