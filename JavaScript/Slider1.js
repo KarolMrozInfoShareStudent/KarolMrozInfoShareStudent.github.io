@@ -4,10 +4,10 @@
 	var time = 3000;
 
 	// Image List
-	images[0] = 'Image/firstPageImage/Slider1/hello_PNG24.png';
-	images[1] = 'Image/firstPageImage/Slider1/html5.png';
-	images[2] = 'Image/firstPageImage/Slider1/CSS.png';
-	images[3] = 'Image/firstPageImage/Slider1/JS.png';
+	
+	images[0] = 'Image/firstPageImage/Slider1/html5.png';
+	images[1] = 'Image/firstPageImage/Slider1/CSS.png';
+	images[2] = 'Image/firstPageImage/Slider1/JS.png';
 
 	// Change Image
 	function changeImg(){
