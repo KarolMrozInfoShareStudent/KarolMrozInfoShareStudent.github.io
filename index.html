@@ -8,6 +8,7 @@
   <title>KarolMróz</title>
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/loader.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibarPrawo.css" />
+  <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/Slider1.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/navibar.css" />
   <link rel="Stylesheet" type="text/css" href="/CSS/IndexCSS/info.css" />
  
@@ -16,15 +17,16 @@
 
 <body>
 
-    <div id="loader-wrapper">
-        <div class="load">
-          <hr/><hr/><hr/><hr/>
-        </div>
-    </div>
+   
 
 
 
   <div id="top">
+      <div id="loader-wrapper">
+          <div class="load">
+            <hr/><hr/><hr/><hr/>
+          </div>
+      </div>
     <div class="wrapper">
       <input type="checkbox" id="menuToggle">
       <nav class="nav-menu sticky">
@@ -43,11 +45,6 @@
             <a href="mailto:adres e-mail">
               <p>CONTACT</p>
             </a>
-            <ul class="dropdown">
-              <li><a href="#">Sub-1</a></li>
-              <li><a href="#">Sub-2</a></li>
-              <li><a href="#">Sub-3</a></li>
-            </ul>
           </li>
           <li>
             <a href="#">
@@ -60,9 +57,7 @@
         <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
       </nav>
     </div>
-
-
-
+    
     <div class="wrappe2">
       <input type="checkbox" id="menuTogglePrawo">
       <nav class="Prawonav-menu sticky">
@@ -88,18 +83,9 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
   <div id=info>
+      <div class="Slider1"><img name="slide" width="200" height="200"></div>
+
     <h1>Uwaga</h1>
     <p>Strona aktualnie w przebudowie, trwają prace nie przeszkadzać</p>
     <p>Zagraj w grę "GALAKTYCZNY WĄŻ" i utucz go level hard</p>
@@ -107,28 +93,13 @@
   </div>
 
 
-  <div class="firstslider">
-    <img name="slide" width="400" height="200">
-
-  </div>>
-
+  
 
 
   
-     <script src="/JavaScript/Slider.js"></script>
+     <script src="/JavaScript/Slider1.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-    <script src="/wąż/gamewąż.js"></script>
-    <script>
-        $('html').addClass('js');
-  
-          $(window).load(function() {
-              setTimeout(
-                  function() {
-                      $("#loader-wrapper").fadeOut();
-                  },2000);
-          });
-          
-          </script>
+    <script src="/JavaScript/Loader.js"></script>
   </body>
 
 </html>

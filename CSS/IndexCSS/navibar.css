@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-	background: url(/Image/space-1.jpg) 100% 100%;
+	background: antiquewhite;
 	height: 2000px;
 }
 
@@ -168,35 +168,3 @@ body{
 	display: flex;
 	justify-content: center
 }
-
-li {
-	display: block;
-	transition-duration: 0.5s;
-   }
-   
-   li:hover {
-	 cursor: pointer;
-   }
-   
-   ul li ul {
-	 visibility: hidden;
-	 opacity: 0;
-	 position: absolute;
-	 transition: all 0.5s ease;
-	 margin-top: 1rem;
-	 left: 0;
-	 display: none;
-   }
-   
-   ul li:hover > ul,
-   ul li ul:hover {
-	 visibility: visible;
-	 opacity: 1;
-	 display: block;
-   }
-   
-   ul li ul li {
-	 clear: both;
-	 width: 100%;
-   }
-
