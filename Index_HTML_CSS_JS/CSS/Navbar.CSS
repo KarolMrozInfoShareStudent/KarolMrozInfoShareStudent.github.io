@@ -42,7 +42,7 @@ nav a:hover{
 
 a.git{
     background: url(/Index_HTML_CSS_JS/Image/social/git.png) no-repeat center;
-    background-size: 50%;
+    background-size: 80%;
     
     
 }
@@ -50,7 +50,7 @@ a.git{
 
 a.liK{
     background: url(/Index_HTML_CSS_JS/Image/social/logo-linkedin.png) no-repeat center;
-    background-size: 50%;
+    background-size: 80%;
 }
 
 
@@ -93,3 +93,5 @@ a.liK{
         background-size: 110%;
       }  
     }
+
+    
