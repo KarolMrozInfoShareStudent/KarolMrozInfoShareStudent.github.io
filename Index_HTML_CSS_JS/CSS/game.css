@@ -1,4 +1,29 @@
-.game{
+
+.Features{
+    
     display: flex;
     margin: 0 auto;
+    margin-top: 20px;
+    max-width: 960px;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center
+}
+.game {
+    width: 300px;
+    height: 200px;
+    
+}
+.snake{
+    display: flex;
+    justify-content: space-around;
+    text-align-last: center;
+   
+}
+.s {
+    
+    width: 60%;
+    height: 40px;
+    background: url(/Index_HTML_CSS_JS/Image/Game/snake-512.png) no-repeat center;
+    background-size: 100% 100%
 }
