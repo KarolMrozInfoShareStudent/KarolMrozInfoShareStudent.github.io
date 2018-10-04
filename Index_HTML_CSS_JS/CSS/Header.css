@@ -1,3 +1,7 @@
+
+
+
+
 body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-repeat center;
     margin: 0 auto
     
@@ -6,6 +10,7 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
 
 .Header{
     width: 100%;
+    max-width: 960px;
     height: 500px;
     background:inherit;
     margin: 0 auto;   
