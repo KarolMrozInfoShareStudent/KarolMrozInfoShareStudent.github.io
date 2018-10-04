@@ -1,0 +1,95 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+
+
+.Navbar{
+    width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  
+}
+
+
+/*Navbar style podstawowe*/
+
+nav {
+    background: gray;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover{
+    background-color: #555;
+  }
+
+/*social menu podstawowe style*/
+
+
+a.git{
+    background: url(/Index_HTML_CSS_JS/Image/social/git.png) no-repeat center;
+    background-size: 50%;
+    
+    
+}
+
+
+a.liK{
+    background: url(/Index_HTML_CSS_JS/Image/social/logo-linkedin.png) no-repeat center;
+    background-size: 50%;
+}
+
+
+.social a{
+    text-indent: -10000px;
+    margin: 0 auto;
+  }
+
+.social{
+    max-width: 80px;
+    margin: 0 auto; 
+  }
+
+
+
+  @media screen and (min-width: 768px){
+
+    nav ul{
+      display: flex;
+    }
+    
+    nav li{
+      flex: 1 1 0;
+    }
+        
+    nav{
+      display: flex;
+      justify-content: space-between;
+    }
+      
+    ul.social{
+      margin: 0;
+    }
+    a.liK{
+        background-size: 110%;
+        
+      }
+    
+    a.git{
+        background-size: 110%;
+      }  
+    }
