@@ -22,3 +22,17 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
     background-size: 100%
 }
 
+
+.Me{
+    margin-top: 19px;
+   text-align: center;
+   box-shadow: 0 8px 6px -6px black;
+}
+
+.Me a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+
