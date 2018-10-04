@@ -26,7 +26,7 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
 .Me{
     margin-top: 19px;
    text-align: center;
-   box-shadow: 0 8px 6px -6px black;
+   box-shadow: 0 8px 6px -6px  rgb(136, 127, 127);
 }
 
 .Me a {
@@ -49,5 +49,6 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
     
     width: 300px;
     height: 300px;
+    box-shadow: 0 8px 6px -6px rgb(136, 127, 127);
 }
 
