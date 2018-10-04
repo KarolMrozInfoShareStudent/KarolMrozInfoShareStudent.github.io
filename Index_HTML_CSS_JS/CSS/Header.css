@@ -36,3 +36,18 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
 }
 
 
+.Picture{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.Slider{
+    margin-top: 25px
+}
+.Slider img {
+    
+    width: 300px;
+    height: 300px;
+}
+
