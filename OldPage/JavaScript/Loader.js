@@ -4,5 +4,5 @@ $(window).load(function () {
     setTimeout(
         function () {
             $("#loader-wrapper").fadeOut();
-        },2000);
+        },1200000);
 });
