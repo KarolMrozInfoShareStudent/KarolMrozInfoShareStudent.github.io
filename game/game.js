@@ -4,16 +4,17 @@ const ctx = canv.getContext('2d');
 
 canv.width = 1000;
 canv.height = 500;
-const piłkaRozmiar = 20;
+
+
+const ballSize = 20;
 
 
 
 
-const canvWidth = canv.width;
-const canvHeight = canv.height;
-let piłkaStartX = canvWidth / 2 - piłkaRozmiar;
-let piłkaStartY = canvHeight / 2 - piłkaRozmiar;
-
+const cw = canv.width;
+const ch = canv.height;
+let ballX = cw / 2 - ballSize 
+let ballY = ch / 2 - ballSize 
 const paletkaWysokość = 100;
 const paletSzerokość = 20
 
@@ -46,8 +47,8 @@ function pozycjaGracza(event) {
     // console.log('pozycja myszy to' + (event.clientY - topCanv))
     graczY = event.clientY - topCanv - paletkaWysokość / 2;
 
-    if (graczY >= canvHeight - paletkaWysokość) {
-        graczY = canvHeight - paletkaWysokość
+    if (graczY >= ch - paletkaWysokość) {
+        graczY = ch - paletkaWysokość
     }
     if (graczY <= 0) {
         graczY = 0
@@ -70,10 +71,10 @@ function odbiciePiłki(){
 function pozycjaKomutera() {
 
     var środekPaletki = graczComputerY + paletkaWysokość / 2;
-    var środekPiłki = piłkaStartY + piłkaRozmiar / 2;
+    var środekPiłki = ballY + ballSize / 2;
 
 
-    if (piłkaStartX > 500) {
+    if (ballX > 500) {
         if (środekPaletki - środekPiłki > 200) {
             //console.log('AAAAA')
             graczComputerY -= 20
@@ -90,11 +91,11 @@ function pozycjaKomutera() {
         }
     }
 
-    else if (piłkaStartX <= 500 && piłkaStartX > 150) {
+    else if (ballX <= 500 && ballX > 150) {
         if (środekPaletki - środekPiłki > 100) {
             graczComputerY -= 3
         }
-        else if (piłkaStartX <= 500 && piłkaStartX < 150) {
+        else if (ballX <= 500 && ballX < 150) {
             graczComputerY += 3
         }
     }
@@ -107,13 +108,13 @@ function przyśpieszeniePiłki() {
     //console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
 
     if (piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10) {
-        piłkaStartX += Math.random(0.5) * 2
+        ballX += Math.random(0.5) * 2
     } else if (piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10) {
         piłkaSzybkośćX -= Math.random(0.5) * 2
     }
 
     if (piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10) {
-        piłkaStartY += Math.random(0.2)
+        ballY += Math.random(0.2)
     } else if (piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10) {
         piłkaSzybkośćY -= Math.random(0.2)
     }
@@ -137,11 +138,11 @@ function komputer() {
 
 function table() {
     ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
-    ctx.fillRect(0, 0, canvWidth, canvHeight);
+    ctx.fillRect(0, 0, cw, ch);
 
-    for (let pozycjaLini = 20; pozycjaLini < canvHeight; pozycjaLini += 30) {
+    for (let pozycjaLini = 20; pozycjaLini < ch; pozycjaLini += 30) {
         ctx.fillStyle = 'gray'
-        ctx.fillRect(canvWidth / 2 - liniaWysokość / 2, pozycjaLini, liniaSzerokość, liniaWysokość)
+        ctx.fillRect(cw / 2 - liniaWysokość / 2, pozycjaLini, liniaSzerokość, liniaWysokość)
     }
 
 }
@@ -153,16 +154,16 @@ function table() {
 
 function piłka() {
     ctx.fillStyle = 'black';
-    ctx.fillRect(piłkaStartX, piłkaStartY, piłkaRozmiar, piłkaRozmiar);
+    ctx.fillRect(ballX, ballY, ballSize, ballSize);
 
-    piłkaStartX += piłkaSzybkośćX;
-    piłkaStartY += piłkaSzybkośćY;
+    ballX += piłkaSzybkośćX;
+    ballY += piłkaSzybkośćY;
 
-    if (piłkaStartY <= 0 || piłkaStartY + piłkaRozmiar >= canvHeight) {
+    if (ballY <= 0 || ballY + ballSize >= ch) {
         piłkaSzybkośćY = -piłkaSzybkośćY;
     }
     przyśpieszeniePiłki()
-    if (piłkaStartX <= 0 || piłkaStartX + piłkaRozmiar >= canvWidth) {
+    if (ballX <= 0 || ballX + ballSize >= cw) {
         piłkaSzybkośćX = -piłkaSzybkośćX;
     }
 
