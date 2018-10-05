@@ -9,25 +9,35 @@
        
 
         body{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+   
+         
+           
             background: url(/Image/space-1.jpg) 100% 100%;
             
         }
         #snake{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: url(/Image/space-1.jpg) 100% 100%;
         }
+        p {
+            margin: 10px;
+            font-size: 90px;
+            color: #00ffea;
+            text-align: center;
+        
+        }
 
-    </style>
+    </style>1
 </head>
 <body>
     <div id='snake'>
+        <p id= "plaerScore">0</p>
     <canvas id="plansza"></canvas>
+    <p id= "plaerScore">0</p>
     </div>
-   
+    <p class="info">Left click to start</p>
  
 
     <script src="game.js"></script>

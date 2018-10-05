@@ -8,6 +8,12 @@ canv.height = 500;
 
 const ballSize = 20;
 
+let playerSorce = 0;
+let aiSorce = 0;
+
+const ScorePlayer = document.getElementById('');
+const ScoreAi = document.getElementById('');
+
 
 
 
@@ -15,20 +21,20 @@ const cw = canv.width;
 const ch = canv.height;
 let ballX = cw / 2 - ballSize 
 let ballY = ch / 2 - ballSize 
-const paletkaWysokość = 100;
-const paletSzerokość = 20
+const paddelH = 100;
+const paddeleW = 30
 
-const graczX = 70;
-const graczComputerX = 910
+const plaerX = 70;
+const aiX = 910
 
-let graczY = 200;
-let graczComputerY = 200;
+let plaerY = 200;
+let aiY = 200;
 
-let liniaSzerokość = 6;
-let liniaWysokość = 16;
+let lineW = 6;
+let lineH = 16;
 
-let piłkaSzybkośćX = 3;
-let piłkaSzybkośćY = 3;
+let ballSpeedX = 0.1;
+let ballSpeedY = 0.1;
 
 //window.addEventListener przyjmuje dwa argumenty pierwszy na jakie zdarzenie (słowo klucz potrzebne być musi mistrz joda) a drugi to funkcja, window jest na całe okno przeglądarki można przypiąć do danego 
 //obszaru np div , canvas
@@ -42,16 +48,16 @@ topCanv = canv.offsetTop;
 
 
 
-
-function pozycjaGracza(event) {
+//ok
+function pozycjaplaera(event) {
     // console.log('pozycja myszy to' + (event.clientY - topCanv))
-    graczY = event.clientY - topCanv - paletkaWysokość / 2;
+    plaerY = event.clientY - topCanv - paddelH / 2;
 
-    if (graczY >= ch - paletkaWysokość) {
-        graczY = ch - paletkaWysokość
+    if (plaerY >= ch - paddelH) {
+        plaerY = ch - paddelH
     }
-    if (graczY <= 0) {
-        graczY = 0
+    if (plaerY <= 0) {
+        plaerY = 0
     }
 
 
@@ -67,36 +73,36 @@ function odbiciePiłki(){
 
 
 
-
+//ok
 function pozycjaKomutera() {
 
-    var środekPaletki = graczComputerY + paletkaWysokość / 2;
+    var środekPaletki = aiY + paddelH / 2;
     var środekPiłki = ballY + ballSize / 2;
 
 
     if (ballX > 500) {
         if (środekPaletki - środekPiłki > 200) {
             //console.log('AAAAA')
-            graczComputerY -= 20
+            aiY -= 20
         } else if (środekPaletki - środekPiłki > 50) {
             //console.log('BBB')
-            graczComputerY -= 10
+            aiY -= 10
         }
         else if (środekPaletki - środekPiłki < - 200) {
             //console.log('CCCC')
-            graczComputerY += 20
+            aiY += 20
         } else if (środekPaletki - środekPiłki < - 50) {
             //console.log('DDDDD')
-            graczComputerY += 10
+            aiY += 10
         }
     }
 
     else if (ballX <= 500 && ballX > 150) {
         if (środekPaletki - środekPiłki > 100) {
-            graczComputerY -= 3
+            aiY -= 3
         }
         else if (ballX <= 500 && ballX < 150) {
-            graczComputerY += 3
+            aiY += 3
         }
     }
 }
@@ -105,34 +111,34 @@ function pozycjaKomutera() {
 
 
 function przyśpieszeniePiłki() {
-    //console.log (piłkaSzybkośćX + '   ' + piłkaSzybkośćY)
+    //console.log (ballSpeedX + '   ' + ballSpeedY)
 
-    if (piłkaSzybkośćX > 0 && piłkaSzybkośćX < 10) {
+    if (ballSpeedX > 0 && ballSpeedX < 10) {
         ballX += Math.random(0.5) * 2
-    } else if (piłkaSzybkośćX < 0 && piłkaSzybkośćX > -10) {
-        piłkaSzybkośćX -= Math.random(0.5) * 2
+    } else if (ballSpeedX < 0 && ballSpeedX > -10) {
+        ballSpeedX -= Math.random(0.5) * 2
     }
 
-    if (piłkaSzybkośćY > 0 && piłkaSzybkośćY < 10) {
+    if (ballSpeedY > 0 && ballSpeedY < 10) {
         ballY += Math.random(0.2)
-    } else if (piłkaSzybkośćY < 0 && piłkaSzybkośćY > -10) {
-        piłkaSzybkośćY -= Math.random(0.2)
+    } else if (ballSpeedY < 0 && ballSpeedY > -10) {
+        ballSpeedY -= Math.random(0.2)
     }
 }
 
-canv.addEventListener('mousemove', pozycjaGracza)
+canv.addEventListener('mousemove', pozycjaplaera)
 
 
 
 
-function gracz() {
+function plaer() {
     ctx.fillStyle = 'green';
-    ctx.fillRect(graczX, graczY, paletSzerokość, paletkaWysokość);
+    ctx.fillRect(plaerX, plaerY, paddeleW, paddelH);
 }
 
 function komputer() {
     ctx.fillStyle = 'yellow';
-    ctx.fillRect(graczComputerX, graczComputerY, paletSzerokość, paletkaWysokość);
+    ctx.fillRect(aiX, aiY, paddeleW, paddelH);
 }
 
 
@@ -142,7 +148,7 @@ function table() {
 
     for (let pozycjaLini = 20; pozycjaLini < ch; pozycjaLini += 30) {
         ctx.fillStyle = 'gray'
-        ctx.fillRect(cw / 2 - liniaWysokość / 2, pozycjaLini, liniaSzerokość, liniaWysokość)
+        ctx.fillRect(cw / 2 - lineH / 2, pozycjaLini, lineW, lineH)
     }
 
 }
@@ -156,15 +162,15 @@ function piłka() {
     ctx.fillStyle = 'black';
     ctx.fillRect(ballX, ballY, ballSize, ballSize);
 
-    ballX += piłkaSzybkośćX;
-    ballY += piłkaSzybkośćY;
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
 
     if (ballY <= 0 || ballY + ballSize >= ch) {
-        piłkaSzybkośćY = -piłkaSzybkośćY;
+        ballSpeedY = -ballSpeedY;
     }
     przyśpieszeniePiłki()
     if (ballX <= 0 || ballX + ballSize >= cw) {
-        piłkaSzybkośćX = -piłkaSzybkośćX;
+        ballSpeedX = -ballSpeedX;
     }
 
 
@@ -176,7 +182,7 @@ function gra() {
 
     piłka()
 
-    gracz()
+    plaer()
 
     komputer()
 
