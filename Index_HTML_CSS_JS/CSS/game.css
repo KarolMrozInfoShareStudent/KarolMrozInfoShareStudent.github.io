@@ -17,13 +17,52 @@
 .snake{
     display: flex;
     justify-content: space-around;
-    text-align-last: center;
+   
+
    
 }
 .s {
-    
+    cursor: pointer;
     width: 60%;
-    height: 40px;
+    height: 40%;
     background: url(/Index_HTML_CSS_JS/Image/Game/snake-512.png) no-repeat center;
-    background-size: 100% 100%
-}
+    background-size: 100% 100%;
+    text-align-last: center;
+ 
+  }
+
+  .snake:hover .s,
+  .snake:focus .s {
+    transform: scale(1.2);
+  }
+  .s::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  .snake:hover .s:before,
+  .snake:focus .s:before {
+    display: block;
+  }
+
+  .s::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+  
+  .snake:hover .s:before,
+  .snake:focus .cs:before {
+    display: block;
+  }
