@@ -14,20 +14,23 @@
     height: 200px;
     
 }
-.snake{
+
+.snake {
     display: flex;
-    justify-content: space-around;
    
+    flex-direction: column
+ 
+}
+  
 
    
-}
 .s {
     cursor: pointer;
-    width: 60%;
+    width: 40%;
     height: 40%;
     background: url(/Index_HTML_CSS_JS/Image/Game/snake-512.png) no-repeat center;
     background-size: 100% 100%;
-    text-align-last: center;
+    text-align: center
  
   }
 
@@ -44,11 +47,14 @@
     top: 0;
     left: 0;
     
+    
+    
   }
   
   .snake:hover .s:before,
   .snake:focus .s:before {
     display: block;
+
   }
 
   .s::before {
@@ -65,4 +71,45 @@
   .snake:hover .s:before,
   .snake:focus .cs:before {
     display: block;
+  }
+
+  .s p{
+      display: flex;
+    align-items:center
+  }
+/*-------------------------------------------*/
+  .pingpong{
+    display: flex;
+   
+    flex-direction: column
+
+  }
+
+  .p {
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    background: url(/Index_HTML_CSS_JS/Image/Game/Ping_Pong.png) no-repeat center;
+    background-size: 100% 100%;
+    text-align: center
+ 
+  }
+
+
+
+  .pingpong:hover .p,
+  .pingpong:focus .p {
+    transform: scale(1.2);
+  }
+  .p::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+    
   }
