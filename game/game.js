@@ -27,7 +27,7 @@ let ballSpeedX = 3;
 let ballSpeedY = 3;
             
 
-const paddelH = 100;
+const paddelH = 150;
 const paddelW = 20;
 
 
