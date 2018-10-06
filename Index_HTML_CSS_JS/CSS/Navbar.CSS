@@ -30,7 +30,7 @@ nav a{
     text-align: center;
     color: #fff;
     display: block;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav a:hover{
@@ -85,12 +85,12 @@ a.liK{
       margin: 0;
     }
     a.liK{
-        background-size: 110%;
+        background-size: 120%;
         
       }
     
     a.git{
-        background-size: 110%;
+        background-size: 120%;
       }  
     }
 

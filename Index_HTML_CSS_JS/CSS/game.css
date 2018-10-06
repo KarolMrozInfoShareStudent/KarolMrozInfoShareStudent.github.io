@@ -7,11 +7,12 @@
     max-width: 960px;
     width: 100%;
     justify-content: space-around;
-    align-content: center
+   
 }
 .game {
-    width: 300px;
+    width: 200px;
     height: 200px;
+    margin: 0 auto; 
     
 }
 
@@ -112,3 +113,16 @@
     
     
   }
+  @media screen and (max-width: 400px){
+   
+    .Features {
+
+      
+      
+      display: flex;
+      flex-direction: column
+    }
+   
+    
+   
+    }

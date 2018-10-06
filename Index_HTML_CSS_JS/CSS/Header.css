@@ -52,7 +52,7 @@ body{ background: url(/Index_HTML_CSS_JS/Image/Header/HeaderBackround.jpeg) no-r
 }
 .Slider img {
     
-    width: 300px;
+    width: 260px;
     height: 300px;
     box-shadow: 0 8px 6px -6px rgb(136, 127, 127);
 }
