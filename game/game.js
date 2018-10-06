@@ -1,193 +1,245 @@
-const canv = document.querySelector("#plansza");
-
-const ctx = canv.getContext('2d');
-
-canv.width = 1000;
-canv.height = 500;
-
-
-const ballSize = 20;
-
+const plansza = document.getElementById('plansza');
+const ctx = plansza.getContext('2d');
+            
+plansza.width = 1000;
+plansza.height = 500;
+            
 let playerSorce = 0;
 let aiSorce = 0;
 
-const ScorePlayer = document.getElementById('');
-const ScoreAi = document.getElementById('');
+const ScorePlayer = document.getElementById('playerScore');
+const ScoreAi = document.getElementById('aiScote');
+            
 
+const cw = plansza.width;
+const ch = plansza.height;
+            
 
+const lineW = 6;
+const lineH = 16;
+           
 
+const ballSize = 20;
+let ballX = cw / 2 - ballSize / 2;
+let ballY = ch / 2 - ballSize / 2;  
+            
+let ballSpeedX = 3;
+let ballSpeedY = 3;
+            
 
-const cw = canv.width;
-const ch = canv.height;
-let ballX = cw / 2 - ballSize 
-let ballY = ch / 2 - ballSize 
 const paddelH = 100;
-const paddeleW = 30
+const paddelW = 20;
 
-const plaerX = 70;
-const aiX = 910
 
-let plaerY = 200;
+const playerX = 70;
+const aiX = 910;
+            
+
+let playerY = 200;
 let aiY = 200;
+            
 
-let lineW = 6;
-let lineH = 16;
+cancasTop = plansza.offsetTop;
 
-let ballSpeedX = 0.1;
-let ballSpeedY = 0.1;
+let newGame = true;
 
-//window.addEventListener przyjmuje dwa argumenty pierwszy na jakie zdarzenie (słowo klucz potrzebne być musi mistrz joda) a drugi to funkcja, window jest na całe okno przeglądarki można przypiąć do danego 
-//obszaru np div , canvas
-
-topCanv = canv.offsetTop;
-//console.log(topCanv)
-
-
-
-
-
-
-
-//ok
-function pozycjaplaera(event) {
-    // console.log('pozycja myszy to' + (event.clientY - topCanv))
-    plaerY = event.clientY - topCanv - paddelH / 2;
-
-    if (plaerY >= ch - paddelH) {
-        plaerY = ch - paddelH
-    }
-    if (plaerY <= 0) {
-        plaerY = 0
-    }
-
-
-}
-
-function odbiciePiłki(){
-
-
-
-
-
-}
-
-
-
-//ok
-function pozycjaKomutera() {
-
-    var środekPaletki = aiY + paddelH / 2;
-    var środekPiłki = ballY + ballSize / 2;
-
-
-    if (ballX > 500) {
-        if (środekPaletki - środekPiłki > 200) {
-            //console.log('AAAAA')
-            aiY -= 20
-        } else if (środekPaletki - środekPiłki > 50) {
-            //console.log('BBB')
-            aiY -= 10
+function aiMove()
+{
+    const middlePadel = aiY + paddelH/2;
+    const middleBall = ballY + ballSize/2;
+    
+    if(ballX >= 500)
+    {
+        if(middlePadel - middleBall > 200)
+        {
+            aiY -= 15;
         }
-        else if (środekPaletki - środekPiłki < - 200) {
-            //console.log('CCCC')
-            aiY += 20
-        } else if (środekPaletki - środekPiłki < - 50) {
-            //console.log('DDDDD')
-            aiY += 10
+        else if(middlePadel - middleBall > 40)
+        {
+            aiY -= 8;        
         }
+        else if(middlePadel - middleBall < -200)
+        {
+            aiY += 15;
+        }
+        else if(middlePadel - middleBall < -40)
+        {
+            aiY += 8;
+        }   
     }
-
-    else if (ballX <= 500 && ballX > 150) {
-        if (środekPaletki - środekPiłki > 100) {
-            aiY -= 3
+    else if(ballX < 500)
+    {
+        if(middlePadel - middleBall > 100)
+        {
+            aiY -= 4;
         }
-        else if (ballX <= 500 && ballX < 150) {
-            aiY += 3
+        else if(middlePadel - middleBall < -100)
+        {
+            aiY += 4;
         }
     }
 }
 
+//ruch paletki
+function playerPos(e)
+{
+    playerY = e.clientY - cancasTop - paddelH / 2;
 
-
-
-function przyśpieszeniePiłki() {
-    //console.log (ballSpeedX + '   ' + ballSpeedY)
-
-    if (ballSpeedX > 0 && ballSpeedX < 10) {
-        ballX += Math.random(0.5) * 2
-    } else if (ballSpeedX < 0 && ballSpeedX > -10) {
-        ballSpeedX -= Math.random(0.5) * 2
+    if(playerY < 0)
+    {
+        playerY = 0;
     }
 
-    if (ballSpeedY > 0 && ballSpeedY < 10) {
-        ballY += Math.random(0.2)
-    } else if (ballSpeedY < 0 && ballSpeedY > -10) {
-        ballSpeedY -= Math.random(0.2)
-    }
+    if(playerY > ch - paddelH)
+    {
+        playerY = ch - paddelH;
+    } 
 }
 
-canv.addEventListener('mousemove', pozycjaplaera)
+plansza.addEventListener("mousemove",playerPos)
 
 
+function table() 
+{
 
-
-function plaer() {
-    ctx.fillStyle = 'green';
-    ctx.fillRect(plaerX, plaerY, paddeleW, paddelH);
-}
-
-function komputer() {
-    ctx.fillStyle = 'yellow';
-    ctx.fillRect(aiX, aiY, paddeleW, paddelH);
-}
-
-
-function table() {
-    ctx.fillStyle = '#fff';//fil style koloruje uzywamy tyych samych wartości co w css
-    ctx.fillRect(0, 0, cw, ch);
-
-    for (let pozycjaLini = 20; pozycjaLini < ch; pozycjaLini += 30) {
-        ctx.fillStyle = 'gray'
-        ctx.fillRect(cw / 2 - lineH / 2, pozycjaLini, lineW, lineH)
-    }
-
-}
-//fillRect jest właściwością wymaga podania czterech argumetóœ, rysowanie w canvasie opiera sie na osi X pozima(od lewej do prawej)
-// i osi Y (od góry do dołu) najpierw x y początek póżniej xy koniec rysowania
-// zamiast wpisywać na sztywno wymiar lepiej podać zmienną z wysokością
-
-//piłka
-
-function piłka() {
     ctx.fillStyle = 'black';
+    ctx.fillRect(0,0,cw,ch);
+    
+
+    ctx.fillStyle = 'white';
+    for(let linePos = 20; linePos < ch; linePos += 30)
+    {
+        ctx.fillRect(cw/2 - lineW/2, linePos, lineW, lineH)
+    }
+}
+
+function reset(who)
+{
+    if(who)
+    {
+        ScorePlayer.textContent = ++playerSorce;
+    }
+    else
+    {
+        ScoreAi.textContent = ++aiSorce;
+    }
+    newGame = true;
+}
+
+function ballReset()
+{
+    ballX = playerX + paddelW;
+    ballY = playerY + paddelH/2 - ballSize/2;
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(ballX, ballY, ballSize, ballSize);
+
+    plansza.addEventListener("click",play);
+}
+
+function play()
+{
+    newGame = false;
+    ballSpeedX = 3;
+    ballSpeedY = 3;
+}
+
+//ruch piłki
+function ball()
+{
+    ctx.fillStyle = 'yellow';
     ctx.fillRect(ballX, ballY, ballSize, ballSize);
 
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
-    if (ballY <= 0 || ballY + ballSize >= ch) {
-        ballSpeedY = -ballSpeedY;
-    }
-    przyśpieszeniePiłki()
-    if (ballX <= 0 || ballX + ballSize >= cw) {
-        ballSpeedX = -ballSpeedX;
+    if(ballY <= 0)
+    {
+        ballSpeedY *= -1;
+        ballY = 0;
+        speedUp();
     }
 
+    if(ballY >= ch - ballSize)
+    {
+        ballSpeedY *= -1;
+        ballY = ch - ballSize;
+        speedUp();
+    }
 
+    if(ballX + ballSize >= cw)
+    {
+        reset(true);
+    }
+
+    if(ballX <= 0)
+    {
+        reset(false);
+    }
+
+    if(ballX <= playerX + paddelW && 
+       ballX >= playerX && 
+       ballY + ballSize >= playerY && 
+       ballY <= playerY + paddelH)
+    { 
+        ballSpeedX *= -1;
+        ballX = playerX + paddelW;  
+        speedUp();
+    }
+
+    if(ballX + ballSize >= aiX && 
+       ballX + ballSize <= aiX + paddelW &&
+       ballY + ballSize >= aiY && 
+       ballY <= aiY + paddelH)
+    {
+        ballSpeedX *= -1;
+        ballX = aiX - ballSize;
+        speedUp();
+    }
+} 
+
+function speedUp()
+{
+    ballSpeedX *= 1.05;
+    ballSpeedY *= 1.02;
+    
+    if(ballSpeedX > 16)
+    {
+        ballSpeedX = 16;
+    }
+    
+    if(ballSpeedY > 10)
+    {
+        ballSpeedY = 10;
+    }
 }
 
-function gra() {
-
-    table()
-
-    piłka()
-
-    plaer()
-
-    komputer()
-
-    pozycjaKomutera()
-
+    
+function player()
+{
+    ctx.fillStyle = 'green';
+    ctx.fillRect(playerX, playerY, paddelW, paddelH);
 }
-// funkcja setInterval umożliwia podanie dwóch argumentów pierwszy jest funkcją a drugi to czas co jaki ma być wykonana
-setInterval(gra, 1000 / 60)
+
+function ai()
+{
+    ctx.fillStyle = 'red';
+    ctx.fillRect(aiX, aiY, paddelW, paddelH);
+}
+
+function game()
+{
+    table();
+    if(!newGame)
+    {
+        ball();
+    }
+    else
+    {   
+        ballReset();
+    }
+    player();
+    ai();
+    aiMove();
+}
+
+setInterval(game,1000/60);
